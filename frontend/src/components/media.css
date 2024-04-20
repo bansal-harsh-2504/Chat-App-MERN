@@ -1,0 +1,128 @@
+@media screen and (max-width: 2000px) {
+  .media-home {
+    height: 470px;
+    width: 700px;
+  }
+  .media-input1{
+    width: 180px;
+  }
+  .media-nochat{
+    width: 100%;
+    height: 100%;
+  }
+  .media-msgcontainer{
+    height: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .media-btn1 {
+    transform: scale(0.9);
+  }
+  .media-home {
+    height: 450px;
+    width: 600px;
+  }
+  .media-input1{
+    width: 130px;
+    transform: scale(0.9);
+  }
+  .media-emoji{
+    transform: scale(.8);
+  }
+  .media-msgimage{
+    height: 40px !important;
+    width: 40px !important;
+  }
+  .media-msgbubble{
+    transform: scale(.92);
+  }
+  .media-msgtime{
+    font-size: 11px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .media-btn1 {
+    transform: scale(0.8);
+    margin-left: -5px;
+  }
+  .media-home {
+    height: 500px;
+    width: 500px;
+  }
+  .media-input1{
+    width: 100px;
+    margin-right: 2px !important;
+    border-radius: 30px !important;
+  }
+  .media-emoji{
+    display: none;
+  }
+  .media-msgimage{
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .media-msgbubble{
+    transform: scale(.85);
+  }
+  .media-msgtime{
+    font-size: 10px !important;
+  }
+  .media-sidebar{
+    padding: 7px !important;
+  }
+  .media-user-image{
+      transform: scale(.8);
+  }
+  .media-user-name{
+    font-size: 15px !important;
+  }
+  .media-conversation{
+    padding: 0.1rem !important;
+  }
+  .media-chat-header{
+    height: 50px !important;
+  }
+  .media-chat-header-image{
+    margin-top: -10px !important;
+  }
+  .media-login, .media-signup{
+    transform: scale(.8);
+  }
+}
+@media screen and (max-width: 500px) {
+  .media-btn1 {
+    display: none !important;
+  }
+  .media-home {
+    height: 450px;
+  }
+  .media-input1{
+    width: 90px;
+    margin-right: 1px !important;
+    border-radius: 30px !important;
+    margin-bottom: -10px !important;
+  }
+  .media-sidebar{
+    padding: 3px !important;
+  }
+  .media-user-image{
+      transform: scale(.8);
+  }
+  .media-user-name{
+    margin-left: -6px;
+  }
+}
+.chat-white-divider{
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.33);
+  margin: .5rem auto .5rem auto;
+}
+.chat-white-divider2{
+  width: 90%;
+  height: 1px;
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: .3rem auto .4rem auto;
+}
