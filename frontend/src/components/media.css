@@ -89,6 +89,9 @@
   .media-login, .media-signup{
     transform: scale(.8);
   }
+  .media-chat-button{
+    display: none;
+  }
 }
 @media screen and (max-width: 500px) {
   .media-btn1 {
