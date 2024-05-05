@@ -7,6 +7,8 @@ const Conversation = ({conversation, lastIdx, emoji}) => {
     const isSelected = selectedConversation?._id === conversation._id;
     const { onlineUsers } = useSocketContext();
     const isOnline = onlineUsers.includes(conversation._id);
+    let fullName = conversation.fullName.split(" ")[0];
+    fullName = fullName.length > 7 ? fullName.substring(0, 6)+".." : fullName;
 
   return <>
         <div className={`media-conversation flex gap-2  items-center hover:bg-green-600 rounded p-2 py-1 cursor-pointer
@@ -21,7 +23,7 @@ const Conversation = ({conversation, lastIdx, emoji}) => {
             </div>
             <div className="flex flex-col flex-1">
                 <div className="flex gap-3 justify-between">
-                    <p className="font-bold text-gray-200 media-user-name">{conversation.fullName}</p>
+                    <p className="font-bold text-gray-200 media-user-name">{fullName}</p>
                     <span className="text-xl media-emoji">{emoji}</span>
                 </div>
             </div>

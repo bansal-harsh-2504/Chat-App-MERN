@@ -50,7 +50,7 @@ const SearchInput = () => {
   };
 
   return (
-    <div>
+    <div className='search-input-container'>
       <form onSubmit={handleSubmit} className="flex">
         <input
           type="text"

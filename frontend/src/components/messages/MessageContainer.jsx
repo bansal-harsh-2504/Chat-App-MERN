@@ -6,7 +6,8 @@ import { useEffect } from "react";
 import { useAuthContext } from "../../context/AuthContext";
 import '../media.css';
 
-const MessageContainer = () => {
+const MessageContainer = (props) => {
+  const {button} = props;
   const { selectedConversation, setSelectedConversation} = useConversation();
 
   useEffect(() => {
@@ -26,7 +27,8 @@ const MessageContainer = () => {
                   alt={selectedConversation.fullName}
                   className="h-8 w-8 rounded-full mb-1 mt-3"
                 />
-                <span className='text-white'>{selectedConversation.fullName}</span>
+                <span className='text-white'>{selectedConversation.fullName}</span> 
+                {button}
             </div>
           </div>
           <Messages />
