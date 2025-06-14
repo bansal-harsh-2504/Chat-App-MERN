@@ -10,6 +10,8 @@ import userRoutes from "./routes/user.routes.js";
 import connectToMongoDB from "./db/connectToMongoDB.js";
 import { app, server } from "./socket/socket.js";
 
+import User from "./models/user.model.js";
+
 const PORT = process.env.PORT || 5000;
 
 const __dirname = path.resolve();
@@ -25,8 +27,13 @@ app.use("/api/users", userRoutes);
 
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
-app.get("/health", (req, res) => {
-  res.status(200).send("OK");
+app.get("/health", async (req, res) => {
+  try {
+    await User.findOne({}, "_id").lean();
+    res.status(200).send("OK");
+  } catch (err) {
+    res.status(500).send("MongoDB connection failed");
+  }
 });
 
 app.get("*", (req, res) => {
